@@ -8,7 +8,7 @@ The objective of this project is to develop a machine learning solution for cred
 - YADA
 
 ## Dataset Used
-The dataset was sourced from the 
+A provided financial dataset was used to develop a machine learning solution for credit risk classification. The data was explored, preprocessed, and transformed through feature engineering before being used for model experimentation and evaluation.
 
 
 
