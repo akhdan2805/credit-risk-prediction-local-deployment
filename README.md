@@ -1,2 +1,3 @@
-# credit-risk-prediction-local-deployment
-Credit risk classification project covering data preprocessing, feature engineering, machine learning experimentation with Logistic Regression, Random Forest, and LightGBM, model selection using 5-fold stratified cross-validation, and evaluation on unseen test data.
+# 💳 Credit Risk Classification using Machine Learning
+
+A machine learning project for credit risk classification, covering data preprocessing, feature engineering, model experimentation, MLflow-based training pipelines, and local web deployment using Streamlit.
