@@ -14,11 +14,11 @@ A provided financial [dataset](https://drive.google.com/file/d/1THTWkxgzovAvDD8W
 
 The target consists of three categories:
 
-| Credit Score | Label |
-|---|---:|
-| Poor | 0 |
-| Standard | 1 |
-| Good | 2 |
+| Credit Score |
+|---:|
+| Poor |
+| Standard |
+| Good |
 
 The data contains numerical, categorical, binary, and ordinal attributes related to customers' financial conditions, credit usage, loans, payment behavior, and credit history.
 
