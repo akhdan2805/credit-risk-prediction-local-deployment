@@ -1,12 +1,7 @@
 # 💳 Credit Risk Classification using Machine Learning
 
-A machine learning project for classifying customer credit risk categories based on financial and behavioral attributes. The project covers data exploration, preprocessing, feature engineering, model experimentation, cross-validation, model selection, local ML pipeline development, and web deployment using Streamlit.
-
 ## Objective
-
-The objective of this project is to develop a machine learning solution for credit risk classification. The project focuses on transforming raw financial data into a reliable machine learning pipeline through data exploration, preprocessing, feature engineering, and model experimentation.
-
-Multiple machine learning algorithms and configurations were evaluated to identify a suitable model based on **Macro F1-Score**. The selected model was then integrated into a reproducible local training pipeline and prepared for web-based inference using **Streamlit**.
+Build a machine learning solution for credit risk classification using financial and behavioral data, with a reproducible training pipeline and Streamlit-based inference.
 
 ## Table of Content
 - [Dataset Used](#dataset-used)
