@@ -130,7 +130,7 @@ For each model configuration, the mean and standard deviation of the Macro F1-Sc
 
 #### 6.3 Model Selection
 
-Based on the cross-validation results, **Random Forest configuration RF_3** achieved the highest mean Macro F1-Score and was selected for final evaluation.
+A total of 15 model configurations were evaluated using cross-validation. The resulting models and their evaluation results were retained as part of the serialized model artifact (`.pkl`), allowing the inference process to determine the best-performing model configuration based on the stored evaluation results.
 
 The selected configuration was:
 
@@ -144,7 +144,7 @@ random_state   : 42
 
 #### 6.4 Final Evaluation
 
-After selecting the best-performing configuration through cross-validation, the **RF_3 Random Forest model** was retrained using the complete training set and evaluated on the unseen test set.
+The 15 model configurations were evaluated using the same test set after the experimentation stage. Their performance was compared using Accuracy, Precision, Recall, and Macro F1-Score to determine the best-performing configuration.
 
 The model achieved the following results:
 
@@ -182,9 +182,11 @@ Preprocessing & Feature Engineering
       ↓
 Model Training
       ↓
-Evaluation
+Model Evaluation
       ↓
-Model Artifact
+15 Model Configurations
+      ↓
+Serialized Model Artifact (.pkl)
       ↓
 Inference
 ```
@@ -193,22 +195,26 @@ Inference
 
 ### Streamlit Application
 
-The selected **Random Forest (RF_3)** model was integrated into a **Streamlit** web application for interactive inference.
+The trained model configurations were serialized into a `.pkl` artifact and integrated into a **Streamlit** application for interactive inference.
 
-The application accepts customer-related financial and behavioral attributes as input and passes them through the preprocessing pipeline before generating a predicted credit score category.
+The application loads the serialized artifact, processes the user input through the preprocessing pipeline, and uses the stored model evaluation results to determine the model configuration used for prediction.
 
 The inference workflow can be summarized as:
 
 ```text
-User Input
-    ↓
-Preprocessing Pipeline
-    ↓
-Finding Best Model
-    ↓
-Prediction
-    ↓
-Poor / Standard / Good
+Data Ingestion
+      ↓
+Preprocessing & Feature Engineering
+      ↓
+Model Training
+      ↓
+Model Evaluation
+      ↓
+15 Model Configurations
+      ↓
+Serialized Model Artifact (.pkl)
+      ↓
+Inference
 ```
 
 ## Technologies
