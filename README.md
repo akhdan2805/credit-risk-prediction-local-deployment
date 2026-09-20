@@ -8,7 +8,10 @@ The objective of this project is to develop a machine learning solution for cred
 
 Multiple machine learning algorithms and configurations were evaluated to identify a suitable model based on **Macro F1-Score**. The selected model was then integrated into a reproducible local training pipeline with **MLflow** for experiment tracking and prepared for web-based inference using **Streamlit**.
 
-## Dataset
+## Table of Content
+- [Dataset Used](#dataset-used)
+
+## Dataset Used
 
 A provided financial [dataset](https://drive.google.com/file/d/1THTWkxgzovAvDD8Wdo1Od4SSiPhxF14S/view?usp=drive_link) was used for this project. The dataset contains customer-related financial and behavioral information, with `Credit_Score` as the target variable.
 
