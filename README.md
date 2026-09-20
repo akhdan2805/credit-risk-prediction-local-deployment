@@ -10,7 +10,7 @@ Multiple machine learning algorithms and configurations were evaluated to identi
 
 ## Dataset
 
-A provided financial dataset was used for this project. The dataset contains customer-related financial and behavioral information, with `Credit_Score` as the target variable.
+A provided financial [dataset](https://drive.google.com/file/d/1THTWkxgzovAvDD8Wdo1Od4SSiPhxF14S/view?usp=drive_link) was used for this project. The dataset contains customer-related financial and behavioral information, with `Credit_Score` as the target variable.
 
 The target consists of three categories:
 
