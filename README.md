@@ -187,17 +187,9 @@ Model Artifact
 Inference
 ```
 
-### 11. Experiment Tracking with MLflow
-
-**MLflow** was integrated into the local training workflow to track model experiments and their results.
-
-The experiment tracking process records relevant information from each training run, making it easier to compare different model configurations and monitor their performance. The selected model and its evaluation results can also be tracked as part of the overall machine learning workflow.
-
-This provides a more structured and reproducible approach to managing machine learning experiments.
-
 ## Web Deployment
 
-### 12. Streamlit Application
+### 11. Streamlit Application
 
 The selected **Random Forest (RF_3)** model was integrated into a **Streamlit** web application for interactive inference.
 
