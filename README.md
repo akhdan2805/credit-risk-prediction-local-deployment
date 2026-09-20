@@ -139,3 +139,80 @@ criterion      : entropy
 class_weight   : balanced
 random_state   : 42
 ```
+
+### 9. Final Evaluation
+
+After selecting the best-performing configuration through cross-validation, the **RF_3 Random Forest model** was retrained using the complete training set and evaluated on the unseen test set.
+
+The model achieved the following results:
+
+| Metric | Score |
+|---|---:|
+| Accuracy | **0.7448** |
+| Precision (Macro) | **0.7293** |
+| Recall (Macro) | **0.7208** |
+| F1-Score (Macro) | **0.7248** |
+
+The class-level performance was further analyzed using the classification report:
+
+| Class | Precision | Recall | F1-Score |
+|---|---:|---:|---:|
+| Poor | 0.75 | 0.73 | 0.74 |
+| Standard | 0.77 | 0.78 | 0.77 |
+| Good | 0.68 | 0.64 | 0.66 |
+
+The final evaluation provides a more representative measure of the selected model's performance on unseen data after the model selection process.
+
+## Local ML Pipeline
+
+### 10. Pipeline Development
+
+The selected model was then integrated into a modular local machine learning pipeline to separate the main stages of the workflow and make the process easier to reproduce and maintain.
+
+The pipeline consists of dedicated components for data ingestion, preprocessing and model construction, training, evaluation, and inference.
+
+The workflow is structured as follows:
+
+```text
+Data Ingestion
+      ↓
+Preprocessing & Feature Engineering
+      ↓
+Model Training
+      ↓
+Evaluation
+      ↓
+Model Artifact
+      ↓
+Inference
+```
+
+### 11. Experiment Tracking with MLflow
+
+**MLflow** was integrated into the local training workflow to track model experiments and their results.
+
+The experiment tracking process records relevant information from each training run, making it easier to compare different model configurations and monitor their performance. The selected model and its evaluation results can also be tracked as part of the overall machine learning workflow.
+
+This provides a more structured and reproducible approach to managing machine learning experiments.
+
+## Web Deployment
+
+### 12. Streamlit Application
+
+The selected **Random Forest (RF_3)** model was integrated into a **Streamlit** web application for interactive inference.
+
+The application accepts customer-related financial and behavioral attributes as input and passes them through the preprocessing pipeline before generating a predicted credit score category.
+
+The inference workflow can be summarized as:
+
+```text
+User Input
+    ↓
+Preprocessing Pipeline
+    ↓
+Random Forest Model
+    ↓
+Prediction
+    ↓
+Poor / Standard / Good
+```
