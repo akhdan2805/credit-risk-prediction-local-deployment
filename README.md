@@ -10,6 +10,10 @@ Multiple machine learning algorithms and configurations were evaluated to identi
 
 ## Table of Content
 - [Dataset Used](#dataset-used)
+- [Methodology](#methodology)
+- [Local ML Pipeline](#local-ml-pipeline)
+- [Web Deployment](#web-deployment)
+- [Technologies](#technologies)
 
 ## Dataset Used
 
@@ -211,3 +215,12 @@ Prediction
     ↓
 Poor / Standard / Good
 ```
+
+## Technologies
+
+- **Language:** Python
+- **Data Processing:** Pandas, NumPy
+- **Machine Learning:** Scikit-learn, LightGBM
+- **Development:** Jupyter Notebook
+- **Deployment:** Streamlit
+- **Evaluation:** Cross-Validation, Macro F1-Score
