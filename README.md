@@ -15,7 +15,7 @@ A provided financial [dataset](https://drive.google.com/file/d/1THTWkxgzovAvDD8W
 The target consists of three categories:
 
 | Credit Score |
-|---:|
+|---|
 | Poor |
 | Standard |
 | Good |
