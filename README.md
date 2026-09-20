@@ -97,9 +97,9 @@ A structured preprocessing pipeline was built using `ColumnTransformer` and Scik
 
 By integrating preprocessing directly into the model pipeline, the same transformations can be consistently applied during training, evaluation, and inference.
 
-## Model Development
+### 6. Model Development
 
-### 6. Model Experimentation
+#### 6.1 Model Experimentation
 
 Three machine learning algorithms were evaluated for the credit risk classification task:
 
@@ -120,13 +120,13 @@ A total of **15 model configurations** were evaluated:
 
 Class balancing was incorporated into the models using `class_weight='balanced'` to account for differences in the distribution of the target classes.
 
-### 7. Cross-Validation
+#### 6.2 Cross-Validation
 
 Model selection was performed using **5-Fold Stratified Cross-Validation** with shuffled folds and `random_state=42`.
 The primary evaluation metric was **Macro F1-Score**, which gives equal importance to all target classes regardless of their frequency.
 For each model configuration, the mean and standard deviation of the Macro F1-Score across the five folds were recorded and compared.
 
-### 8. Model Selection
+#### 6.3 Model Selection
 
 Based on the cross-validation results, **Random Forest configuration RF_3** achieved the highest mean Macro F1-Score and was selected for final evaluation.
 
@@ -140,7 +140,7 @@ class_weight   : balanced
 random_state   : 42
 ```
 
-### 9. Final Evaluation
+#### 6.4 Final Evaluation
 
 After selecting the best-performing configuration through cross-validation, the **RF_3 Random Forest model** was retrained using the complete training set and evaluated on the unseen test set.
 
@@ -165,7 +165,7 @@ The final evaluation provides a more representative measure of the selected mode
 
 ## Local ML Pipeline
 
-### 10. Pipeline Development
+### Pipeline Development
 
 The selected model was then integrated into a modular local machine learning pipeline to separate the main stages of the workflow and make the process easier to reproduce and maintain.
 
@@ -189,7 +189,7 @@ Inference
 
 ## Web Deployment
 
-### 11. Streamlit Application
+### Streamlit Application
 
 The selected **Random Forest (RF_3)** model was integrated into a **Streamlit** web application for interactive inference.
 
