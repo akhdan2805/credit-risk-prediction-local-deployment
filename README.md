@@ -209,7 +209,7 @@ User Input
     ↓
 Preprocessing Pipeline
     ↓
-Random Forest Model
+Finding Best Model
     ↓
 Prediction
     ↓
