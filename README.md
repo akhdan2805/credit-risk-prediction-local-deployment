@@ -70,3 +70,74 @@ The target variable was encoded as:
 Poor     → 0
 Standard → 1
 Good     → 2
+```
+
+### 4. Train-Test Split
+
+The prepared dataset was divided into **80% training data and 20% testing data** using stratified sampling to preserve the original class distribution.
+
+This resulted in:
+
+- **Training set:** 16,819 records
+- **Test set:** 4,205 records
+
+A fixed `random_state=42` was used to ensure reproducibility across experiments.
+
+### 5. Preprocessing Pipeline
+
+A structured preprocessing pipeline was built using `ColumnTransformer` and Scikit-learn `Pipeline` to apply different transformations based on feature types.
+
+**Numerical features** were processed using median imputation followed by standard scaling.
+
+**Binary features** were handled using most-frequent imputation and one-hot encoding.
+
+**Categorical features** were processed using most-frequent imputation and one-hot encoding.
+
+**Ordinal features**, particularly `Credit_Mix`, were encoded according to their defined order.
+
+By integrating preprocessing directly into the model pipeline, the same transformations can be consistently applied during training, evaluation, and inference.
+
+## Model Development
+
+### 6. Model Experimentation
+
+Three machine learning algorithms were evaluated for the credit risk classification task:
+
+- **Logistic Regression**
+- **Random Forest**
+- **LightGBM**
+
+Rather than relying on a single default configuration, multiple configurations were tested for each algorithm by varying their respective hyperparameters.
+
+A total of **15 model configurations** were evaluated:
+
+| Algorithm | Configurations |
+|---|---:|
+| Logistic Regression | 5 |
+| Random Forest | 5 |
+| LightGBM | 5 |
+| **Total** | **15** |
+
+Class balancing was incorporated into the models using `class_weight='balanced'` to account for differences in the distribution of the target classes.
+
+### 7. Cross-Validation
+
+Model selection was performed using **5-Fold Stratified Cross-Validation** with shuffled folds and `random_state=42`.
+
+The primary evaluation metric was **Macro F1-Score**, which gives equal importance to all target classes regardless of their frequency.
+
+For each model configuration, the mean and standard deviation of the Macro F1-Score across the five folds were recorded and compared.
+
+### 8. Model Selection
+
+Based on the cross-validation results, **Random Forest configuration RF_3** achieved the highest mean Macro F1-Score and was selected for final evaluation.
+
+The selected configuration was:
+
+```text
+Model          : Random Forest
+n_estimators   : 200
+criterion      : entropy
+class_weight   : balanced
+random_state   : 42
+```
