@@ -3,7 +3,7 @@
 ## Objective
 Build a machine learning solution for credit risk classification using financial and behavioral data, with a reproducible training pipeline and Streamlit-based inference.
 
-## Table of Content
+## Table of Contents
 - [Dataset Used](#dataset-used)
 - [Methodology](#methodology)
 - [Local ML Pipeline](#local-ml-pipeline)
